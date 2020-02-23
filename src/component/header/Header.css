@@ -1,0 +1,39 @@
+.header {
+    position: absolute;
+    top: 4px;
+    height: calc(7% - 20px);
+    left: 4px;
+    right: 4px;
+    border: 1px solid grey;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 15%;
+    height: 100%;
+}
+
+.header-title div {
+    position: relative;
+    height: 35px;
+    top: calc(50% - 17.5px);
+    vertical-align: middle;
+}
+
+.header-account {
+    width: 30%;
+    height: 100%;
+}
+
+.header-account div {
+    position: relative;
+    height: 25px;
+    top: calc(50% - 12.5px);
+    vertical-align: middle;
+}
