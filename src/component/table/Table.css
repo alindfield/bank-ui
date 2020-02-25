@@ -1,3 +1,14 @@
-.table {
+.table table {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+}
 
+.table tbody {
+    display: block;
+    overflow-y: auto;
+}
+
+.table thead tr {
+    display: block;
 }

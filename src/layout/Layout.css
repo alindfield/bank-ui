@@ -6,7 +6,8 @@
 .layout-content {
     position: absolute;
     bottom: 4px;
-    height: calc(93% - 20px);
+    /*height: calc(100% - 40px);*/
+    top: 58px;
     left: 4px;
     right: 4px;
     border: 1px solid grey;

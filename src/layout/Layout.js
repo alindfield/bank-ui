@@ -6,7 +6,7 @@ import Transactions from '../feature/transactions/Transactions';
 const Layout = props => {
     return (
         <div className="layout">
-            <Header></Header>
+            <Header />
             <div className="layout-content">
                 <Transactions />
             </div>

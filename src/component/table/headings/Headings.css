@@ -1,3 +1,7 @@
-.headings {
-    
+.headings th {
+    border: 1px solid grey;
+    text-decoration: underline;
+    background-color: rgb(190, 211, 211);
+    font-size: 1.1em;
+    font-weight: bold;
 }
