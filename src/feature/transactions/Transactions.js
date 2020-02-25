@@ -61,17 +61,19 @@ const Transactions = props => {
     const config = {
         columns: [
             {
-                id: 1,
                 name: 'Date',
                 config: {width: '300px', align: 'left'},
                 field: 'transactionDate'
             },
             {
-                id: 2,
                 name: 'Amount',
                 config: {width: '200px', align: 'right'},
                 field: 'amount'
-            }            
+            },
+            {
+                name: 'test',
+                config: {width: '100px'}
+            }        
         ]
     };
 

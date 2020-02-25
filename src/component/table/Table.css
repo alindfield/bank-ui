@@ -1,7 +1,15 @@
 .table table {
     position: absolute;
+    left: 4px;
+    right: 4px;
     top: 4px;
     bottom: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-body {
+    overflow-y: auto;
 }
 
 .table tbody {

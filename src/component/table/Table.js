@@ -8,10 +8,14 @@ const Table = props => {
         <div className="table">
             <table>
                 <thead>
-                    <Headings columns={props.config.columns} />
+                    <div>
+                        <Headings columns={props.config.columns} />
+                    </div>
                 </thead>
                 <tbody>
-                    <Rows rows={props.data} columns={props.config.columns}/>
+                    <div className="table-body">
+                        <Rows rows={props.data} columns={props.config.columns}/>
+                    </div>
                 </tbody>
             </table>
         </div>
