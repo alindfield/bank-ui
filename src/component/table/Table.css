@@ -8,12 +8,8 @@
     flex-direction: column;
 }
 
-.table-body {
-    overflow-y: auto;
-}
-
 .table tbody {
-    display: block;
+    display: inline-block;
     overflow-y: auto;
 }
 

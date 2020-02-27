@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Row = props => {
-    console.log(props.row);
     const content = props.columns.map((column, index) => {
         const data = props.row[column.field] === undefined ? '' : props.row[column.field];
         return (
