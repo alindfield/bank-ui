@@ -1,9 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Table from '../../component/table/Table';
-import {updateData} from '../../store/reducers/transactions';
+import {updateData, getData} from '../../store/reducers/transactions';
 
-const Transactions = props => {
+const Transactions = () => {
+
+    /*
+
+    todo
+    ====
+
+    columns trans date (sortable), trans amount (sortable), current balance, trans type (sortable), reference
+
+    row formatting light grey - credit, light blue debit, light green direct debit
+
+    cell formatting - trans amount blue positive and red negative
+
+    */
+    useEffect(() => {
+        if (!transactionState.loading && transactionState.load) {
+            dispatch(getData());
+        };
+    });
 
     const transactionState = useSelector(state => state.TRN);
     const dispatch = useDispatch();
@@ -12,6 +30,10 @@ const Transactions = props => {
         dispatch(updateData(data))
     };
 
+    /*
+add row styling function
+add column styling function
+    */
     const config = {
         columns: [
             {

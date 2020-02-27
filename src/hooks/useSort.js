@@ -7,7 +7,7 @@ export const useSort = () => {
     const [ascending, setAscending] = useState(false);
 
     const compareValues = (key, ascending = true) => {
-        
+
         return (a, b) => {
            
             let comparison = 0;
