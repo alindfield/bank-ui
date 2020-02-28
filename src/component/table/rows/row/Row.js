@@ -1,19 +1,26 @@
 import React from 'react';
+import {useDateFormatter} from '../../../../hooks/useDateFormatter';
+import {useCurrencyFormatter} from '../../../../hooks/useCurrencyFormatter';
+import './Row.css';
 
 const Row = props => {
+    const dateFormatter = useDateFormatter();
+    const currencyFormatter = useCurrencyFormatter();
     const content = props.columns.map((column, index) => {
-        const data = props.row[column.field] === undefined ? '' : props.row[column.field];
+        let data = props.row[column.field] === undefined ? '' : props.row[column.field];
+        const styles = column.formatter ? column.formatter(data) : {};
+        if (column.hasOwnProperty('dateFormat')) {
+            data = dateFormatter(data, column.dateFormat);
+        };
+        if (column.hasOwnProperty('currency') && column.currency) {
+            data = currencyFormatter(data);
+        }
         return (
-            <td {... column.config} key={index}>
+            <td style={styles} className="row" {... column.config} key={index}>
                 {data}
             </td>
         );
     });
-    /*const content = props.columns.map((column, index) => (
-        <td key={index}>
-            abc
-        </td>
-    ));*/
     return content;
 }
 

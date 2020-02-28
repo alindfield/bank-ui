@@ -1,7 +1,7 @@
 .app {
   position: fixed;
   text-align: none;
-  background-color: lightgray;
+  background-color: rgb(241, 225, 225);
   left: 4px;
   right: 4px;
   top: 4px;

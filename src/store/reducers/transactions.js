@@ -57,7 +57,7 @@ export const getData = () => {
 };
 
 export const updateData = (data) => {
-    return createAction(actions.SORT, {data: data});
+    return createAction(actions.UPDATE, {data: data});
 };
 
 const doStartGet = () => {

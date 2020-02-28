@@ -30,35 +30,54 @@ const Transactions = () => {
         dispatch(updateData(data))
     };
 
-    /*
-add row styling function
-add column styling function
-    */
+    const formatRow = (row) => {
+        if (row.type === "Direct Debit") return {"backgroundColor": "lightGreen"}
+        if (row.amount > 0) return {"backgroundColor": "lightGrey"};
+        if (row.amount < 0) return {"backgroundColor": "lightBlue"};
+        return {};
+    };
+
+    const formatAmount = (data) => {
+        if (data < 0) return {"color": "red"};
+        if (data > 0) return {"color": "blue"};
+        return {};
+    };
+
     const config = {
+        rowFormatter: formatRow,
         columns: [
             {
-                name: 'Date',
-                config: {width: '300px', align: 'left'},
+                name: 'Transaction Date',
+                config: {width: '180px', align: 'left'},
                 field: 'transactionDate',
-                sortable: true
-            },
-            {
-                name: 'Date2',
-                config: {width: '300px', align: 'left'},
-                field: 'otherDate',
+                dateFormat: "dd:mm:yyyy",
                 sortable: true
             },
             {
                 name: 'Amount',
                 config: {width: '200px', align: 'right'},
                 field: 'amount',
+                formatter: formatAmount,
+                currency: true,
                 sortable: true
             },
             {
-                name: 'test',
-                config: {width: '100px'},
-                field: 'test'
-            }        
+                name: 'Balance',
+                config: {width: '200px', align: 'right'},
+                currency: true,
+                field: 'balance'
+            },
+            {
+                name: 'Type',
+                config: {width: '200px', align: 'left'},
+                field: 'type',
+                sortable: true
+            },
+            {
+                name: 'Reference',
+                config: {width: '350px', align: 'left'},
+                field: 'ref'
+            } 
         ]
     };
 
