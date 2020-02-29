@@ -1,8 +1,10 @@
 export const useCurrencyFormatter = () => {
 
-    const formatter = (number) => {
-        return Math.floor(number) + "." + Math.floor(100 * (number - Math.floor(number))).toString().padStart(2, "0");
+    const formatter = new Intl.NumberFormat('pl', {style: 'currency', currency: 'PLN'});
+
+    const doFormat = (number) => {
+        return formatter.format(number);
     };
 
-    return formatter;
+    return doFormat;
 }
