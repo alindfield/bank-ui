@@ -1,9 +1,16 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef*/
+
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+beforeAll(() => {
+  const div = document.createElement('div');
+  div.setAttribute('id', 'root');
+  window.domNode = div;
+  document.body.appendChild(div);
+});
+
+it('renders', () => {
+  let app = shallow(<App />);
+  expect(app).toMatchSnapshot();
 });

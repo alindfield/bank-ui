@@ -18,6 +18,15 @@ const Transactions = () => {
     cell formatting - trans amount blue positive and red negative
 
     */
+
+    /*
+
+    todo
+    ====
+
+    add tests
+    
+    */
     useEffect(() => {
         if (!transactionState.loading && transactionState.load) {
             dispatch(getData());

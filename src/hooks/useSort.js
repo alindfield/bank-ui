@@ -36,7 +36,7 @@ export const useSort = () => {
     const doSort = (newColumn, data) => {
         setColumn(newColumn);
         const newAscending = !ascending;
-        setAscending(column !== null && newColumn.field === column.field ? newAscending : true);
+        setAscending(column !== null && newColumn.field !== column.field ? newAscending : true);
         const newData = copyObject(data).sort(compareValues(newColumn.field, newAscending));
         return newData;
     };
