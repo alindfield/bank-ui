@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Table from '../../component/table/Table';
 import {updateData, getData} from '../../store/reducers/transactions';
+import './Transactions.css';
 
 const Transactions = () => {
 
@@ -48,14 +49,14 @@ const Transactions = () => {
         columns: [
             {
                 name: 'Transaction Date',
-                config: {width: '180px', align: 'left'},
+                config: {align: 'left', width: '150px'},
                 field: 'transactionDate',
-                dateFormat: "dd:mm:yyyy",
+                dateFormat: "DD:MM:YYYY",
                 sortable: true
             },
             {
                 name: 'Amount',
-                config: {width: '200px', align: 'right'},
+                config: {align: 'right', width: '90px'},
                 field: 'amount',
                 formatter: formatAmount,
                 currency: true,
@@ -63,26 +64,26 @@ const Transactions = () => {
             },
             {
                 name: 'Balance',
-                config: {width: '200px', align: 'right'},
+                config: {align: 'right', width: '90px'},
                 currency: true,
                 field: 'balance'
             },
             {
                 name: 'Type',
-                config: {width: '200px', align: 'left'},
+                config: {align: 'left', width: '110px'},
                 field: 'type',
                 sortable: true
             },
             {
                 name: 'Reference',
-                config: {width: '350px', align: 'left'},
+                config: {align: 'left', width: '300px'},
                 field: 'ref'
             } 
         ]
     };
 
     return (
-        <Table update={update} config={config} data={transactionState.rows}/>
+        <Table className="table" update={update} config={config} data={transactionState.rows}/>
     );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import {useDateFormatter} from '../../../../hooks/useDateFormatter';
 import {useCurrencyFormatter} from '../../../../hooks/useCurrencyFormatter';
-import './Row.css';
 
 const Row = props => {
     const dateFormatter = useDateFormatter();
@@ -16,7 +15,7 @@ const Row = props => {
             data = currencyFormatter(data);
         }
         return (
-            <td style={styles} className="row" {... column.config} key={index}>
+            <td style={styles} {... column.config} key={index}>
                 {data}
             </td>
         );

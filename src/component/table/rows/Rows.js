@@ -1,6 +1,5 @@
 import React from 'react';
 import Row from './row/Row';
-import './Rows.css';
 
 const Rows = props => {
     const content = props.rows.map((row, index) => {
