@@ -26,5 +26,26 @@
         "balance": 871.95,
         "type": "Direct Debit",
         "ref": "Car"
+    },
+    {
+        "transactionDate": "2020-02-03",
+        "amount": -17.44,
+        "balance": 854.51,
+        "type": "Direct Debit",
+        "ref": "Insurance"
+    },
+    {
+        "transactionDate": "2020-02-03",
+        "amount": -291.21,
+        "balance": 563.3,
+        "type": "Direct Debit",
+        "ref": "Mortgage"
+    },
+    {
+        "transactionDate": "2020-02-04",
+        "amount": -67.91,
+        "balance": 495.39,
+        "type": "Debit Card",
+        "ref": "Shell"
     }
 ]
