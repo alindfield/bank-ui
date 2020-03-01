@@ -16,7 +16,7 @@ const Table = props => {
         <div className="table">
             <table>
                 <thead>
-                        <Headings doSort={applySort} columns={props.config.columns} />
+                        <Headings doSort={applySort} config={props.config} />
                 </thead>
                 <tbody>
                         <Rows rows={props.data} config={props.config}/>

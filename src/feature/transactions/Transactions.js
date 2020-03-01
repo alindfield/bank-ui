@@ -54,7 +54,7 @@ const Transactions = () => {
     };
 
     const config = {
-        formatter: formatRow,
+        rowFormatter: formatRow,
         columns: [
             {
                 name: 'Transaction Date',
@@ -67,7 +67,7 @@ const Transactions = () => {
                 name: 'Amount',
                 config: {align: 'right', width: '90px'},
                 field: 'amount',
-                formatter: formatAmount,
+                dataFormatter: formatAmount,
                 currency: true,
                 sortable: true
             },

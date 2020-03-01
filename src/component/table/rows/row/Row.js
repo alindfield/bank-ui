@@ -7,7 +7,7 @@ const Row = props => {
     const currencyFormatter = useCurrencyFormatter();
     const content = props.columns.map((column, index) => {
         let data = props.row[column.field] === undefined ? '' : props.row[column.field];
-        const styles = column.formatter ? column.formatter(data) : {};
+        const styles = column.dataFormatter ? column.dataFormatter(data) : {};
         if (column.hasOwnProperty('dateFormat')) {
             data = dateFormatter(data, column.dateFormat);
         };
