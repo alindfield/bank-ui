@@ -1,9 +1,10 @@
 .table td {
     border: 1px solid grey;
+    padding: 2px;
 }
 
 .table th {
-    border: 1px solid grey;
+    border: 2px solid grey;
     text-decoration: underline;
     background-color: rgb(190, 211, 211);
     font-size: 1.1em;

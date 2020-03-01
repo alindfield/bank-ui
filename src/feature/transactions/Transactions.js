@@ -54,7 +54,7 @@ const Transactions = () => {
     };
 
     const config = {
-        rowFormatter: formatRow,
+        formatter: formatRow,
         columns: [
             {
                 name: 'Transaction Date',
