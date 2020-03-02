@@ -57,7 +57,7 @@ const Transactions = () => {
         rowFormatter: formatRow,
         columns: [
             {
-                name: 'Transaction Date',
+                name: 'Date',
                 config: {align: 'left', width: '150px'},
                 field: 'transactionDate',
                 dateFormat: "DD:MM:YYYY",

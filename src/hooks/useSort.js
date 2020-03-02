@@ -3,7 +3,7 @@ import {copyObject} from '../shared/utilities';
 
 export const useSort = () => {
 
-    const [column, setColumn] = useState(null);
+    const [field, setField] = useState(null);
     const [ascending, setAscending] = useState(false);
 
     const compareValues = (key, ascending = true) => {
@@ -33,12 +33,11 @@ export const useSort = () => {
         };
     }
 
-    const doSort = (newColumn, data) => {
-        setColumn(newColumn);
+    const doSort = (newField, data) => {
+        setField(newField);
         const newAscending = !ascending;
-        setAscending(column !== null && newColumn.field === column.field ? newAscending : true);
-        const newData = copyObject(data).sort(compareValues(newColumn.field, newAscending));
-        return newData;
+        setAscending(field !== null && newField === field ? newAscending : true);
+        return [newAscending, copyObject(data).sort(compareValues(newField, newAscending))];
     };
 
     return doSort;
